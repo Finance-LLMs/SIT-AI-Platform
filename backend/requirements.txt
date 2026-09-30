@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+httpx
+pydantic
+python-multipart
+lancedb
+pandas
+rank-bm25
+beautifulsoup4
+faster-whisper
+piper-tts

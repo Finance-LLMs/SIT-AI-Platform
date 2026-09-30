@@ -1,0 +1,23 @@
+# secrets — never commit
+backend/.env
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# node
+frontend/node_modules/
+frontend/dist/
+
+# large model weights (downloaded by setup, see README)
+backend/voices/*.onnx
+backend/voices/*.onnx.json
+
+# recording artifacts (final video is kept at demo/SIT_AI_Platform_Demo.mp4)
+demo/out/
+demo/_user_q_raw.wav
+
+# os
+.DS_Store
