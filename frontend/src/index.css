@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-[#070a13] text-slate-200 font-sans antialiased min-h-screen;
+}
+
+/* aurora backdrop */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(60rem 40rem at 15% -10%, rgba(45, 212, 191, 0.14), transparent 60%),
+    radial-gradient(50rem 35rem at 90% 10%, rgba(139, 92, 246, 0.14), transparent 60%),
+    radial-gradient(55rem 40rem at 50% 110%, rgba(56, 189, 248, 0.10), transparent 60%),
+    #070a13;
+}
+.aurora::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.glass {
+  @apply bg-white/[0.04] border border-white/10 backdrop-blur-xl rounded-2xl;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-semibold
+    bg-gradient-to-r from-teal-400 to-sky-500 text-slate-950
+    hover:brightness-110 active:scale-[0.98] transition cursor-pointer
+    disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium
+    border border-white/15 text-slate-200 hover:bg-white/10 active:scale-[0.98]
+    transition cursor-pointer disabled:opacity-40;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes ring-pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+.speak-ring {
+  animation: ring-pulse 1.4s ease-out infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+.cursor-blink { animation: blink 1s step-end infinite; }
+
+@keyframes eyeblink {
+  0%, 94%, 100% { transform: scaleY(1); }
+  96%, 98% { transform: scaleY(0.08); }
+}
+.blink { animation: eyeblink 4.6s ease-in-out infinite; }
+
+@keyframes gazedrift {
+  0%, 38%, 100% { transform: translate(0, 0); }
+  42%, 58% { transform: translate(1.6px, 0.3px); }
+  62%, 78% { transform: translate(-1.2px, 0.2px); }
+}
+.gaze { animation: gazedrift 7s ease-in-out infinite; }
+
+@keyframes breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(0.8px) scale(1.006); }
+}
+.breathe { animation: breathe 4.2s ease-in-out infinite; transform-origin: 100px 120px; }
