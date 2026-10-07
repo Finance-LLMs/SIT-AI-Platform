@@ -5,7 +5,8 @@ campus assistant grounded in real SIT web content, a persona debate arena, and a
 mentoring studio, with lip-synced avatars, Singaporean voice profiles, and real-time
 streaming throughout.
 
-> 🎬 **[Watch the demo video](demo/SIT_AI_Platform_Demo.mp4)** (3 min, 1080p, narrated)
+> 🎬 **[Watch the demo video](demo/SIT_AI_Platform_Demo.mp4)** (3 min, 1080p, narrated) ·
+> 📊 **[Slide deck](docs/SIT_AI_Platform_Slides.pptx)** (12 slides, PowerPoint — source in [SLIDES.md](SLIDES.md))
 
 This platform is a ground-up redesign that consolidates four earlier prototypes
 ([AI-debate-bot](https://github.com/Finance-LLMs/AI-debate-bot),
